@@ -7,15 +7,59 @@
       </div>
 
       <div class="right_con">
-        <div class="search">
-          <div class="sc-CB-jJMGHv">
-            <span class="sc-CB-iemXMA">
-              <i class="sc-CB-hKFyIo"></i>
-            </span>
-            <span></span>
-          </div>
-        </div>
+        <ul class="right_con_li">
+          <li class="right_con_li_item">
+            <div class="right_con_li_item__search">
+                <svg  t="1607591298743" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1510" width="20" height="20"><path d="M844.515556 817.777778 684.562963 657.73037c45.037037-51.294815 72.438519-118.613333 72.438519-192.284444 0-160.995556-130.56-291.555556-291.555556-291.555556S173.89037 304.45037 173.89037 465.445926s130.56 291.555556 291.555556 291.555556c73.671111 0 140.98963-27.306667 192.284444-72.438519l159.952593 159.952593c7.395556 7.395556 19.437037 7.395556 26.832593 0S851.911111 825.078519 844.515556 817.777778zM465.445926 719.075556c-140.041481 0-253.62963-113.588148-253.62963-253.62963s113.588148-253.62963 253.62963-253.62963 253.62963 113.588148 253.62963 253.62963S605.582222 719.075556 465.445926 719.075556z" p-id="1511" fill="#cdcdcd"></path></svg>
+                <input type="text" aria-autocomplete="none" placeholder="搜索文档、控制台、API、解决方案和资源" class="sc-CB-bkbjAj CB-bVzJZD" value="" data-spm-anchor-id="5176.13329450.nav-right.i0.31f14df5ya0vTK">
+            </div>
+
+
+          </li>
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container ">费用</span>
+          </li>
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container">工单</span>
+          </li>
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container">企业</span>
+          </li>
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container">官网</span>
+          </li>
+           <li class="right_con_li_item">
+            <span class="right_con_li_item_container">支持</span>
+          </li>
+
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container"><i class="iconfont">&#xe64e;</i></span>
+          </li>
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container"><i class="iconfont">&#xe600;</i></span>
+          </li>
+           <li class="right_con_li_item">
+            <span class="right_con_li_item_container"><i class="iconfont">&#xe600;</i></span>
+          </li>
+           <li class="right_con_li_item">
+            <span class="right_con_li_item_container"><i class="iconfont">&#xe659;</i></span>
+          </li>
+
+          <li class="right_con_li_item">
+            <span class="right_con_li_item_container">简体</span>
+          </li>
+
+          <li class="right_con_li_item" style="margin-right: 10px;">
+            <span class="right_con_li_item_container"><img src="~@/assets/default_handsome.jpg" alt="" style="width: 40px;height: 40px;border-radius: 50%;vertical-align: middle;position: relative;top:-7px;"></span>
+          </li>
+
+
+
+
+        </ul>
       </div>
+
+
     </div>
 </template>
 
@@ -26,12 +70,16 @@
 </script>
 
 <style scoped>
+  /deep/ ul {
+    padding:0px;
+  }
   .nav {
     position: fixed;
     top: 0px;
     right: 0px;
     left: 0px;
     z-index: 999;
+    min-width: 960px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px 0px;
     background-color: rgb(255, 255, 255);
     height: 50px;
@@ -64,43 +112,90 @@
     white-space: nowrap;
   }
   .right_con {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    ine-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
     font-size: 12px;
+    min-width: 300px;
+    height: 100%;
+
+    top:0px;
   }
-  .search {
-    padding-right: 12px;
-    width: 280px;
-    min-width: 120px;
-    max-width: 280px;
+
+  .right_con_li_item{
+    display: inline-block;
+    margin-right: 30px;
+    color: rgb(51, 51, 51);
+
   }
-  .sc-CB-jJMGHv{
-    display: block;
+
+  .right_con_li_item__search{
+
+    align-items: center;
     position: relative;
-  }
-  .sc-CB-iemXMA{
+    border: 1px solid rgb(222, 222, 222);
     height: 30px;
     line-height: 30px;
-    padding-left: 10px;
-    color: rgb(136, 136, 136);
+    font-size: 12px;
+    transition: all 0.3s ease-out 0s;
+
   }
-  .sc-CB-hKFyIo{
-    font-size: 14px;
-    color: rgb(136, 136, 136);
-    display: inline-block;
-    line-height: 1;
-    font-size: inherit;
-    font-weight: 200;
-    font-style: normal;
+  .right_con_li_item__search .icon{
+    position: relative;
+    top:5px;
+    left:5px;
+  }
+  right_con_li_item__search:hover{
+
+  }
+
+  .right_con_li_item_container{
+    cursor: pointer;
+  }
+  .right_con_li_item_container:hover{
+    color:rgb(255, 106, 0);
+  }
+
+
+  .sc-CB-bkbjAj {
+    height: 30px;
+    line-height: 30px;
+  }
+  .CB-bVzJZD {
+    padding: 0px 8px;
+    font-size: 12px;
+    border:none;
+    box-sizing: border-box;
+    outline: none;
+    background: transparent;
+    width: 250px;
+    color: rgb(51, 51, 51);
+}
+
+
+
+  *, :after, :before {
+    box-sizing: border-box;
+  }
+  i {
+    font-style: italic;
+  }
+
+
+  @font-face {
+    font-family: 'iconfont';  /* project id 2262767 */
+    src: url('//at.alicdn.com/t/font_2262767_ttdjmm70efg.eot');
+    src: url('//at.alicdn.com/t/font_2262767_ttdjmm70efg.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2262767_ttdjmm70efg.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2262767_ttdjmm70efg.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2262767_ttdjmm70efg.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2262767_ttdjmm70efg.svg#iconfont') format('svg');
+  }
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
     -webkit-font-smoothing: antialiased;
-    vertical-align: baseline;
-    text-rendering: auto;
-    transition: all 200ms ease 0s;
     -webkit-text-stroke-width: 0.2px;
-  }
+    -moz-osx-font-smoothing: grayscale;}
+
 </style>
