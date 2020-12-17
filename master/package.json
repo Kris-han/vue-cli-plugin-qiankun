@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "es6-promise": "^4.2.8",
+    "less": "^3.13.0",
+    "less-loader": "^7.1.0",
     "qiankun": "^2.0.0",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

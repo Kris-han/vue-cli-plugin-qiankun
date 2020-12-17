@@ -1,0 +1,149 @@
+
+/*清除元素默认的内外边距  */
+* {
+    margin: 0;
+    padding: 0
+}
+/*让所有斜体 不倾斜*/
+em,
+i {
+    font-style: normal;
+}
+/*去掉列表前面的小点*/
+li {
+    list-style: none;
+}
+/*图片没有边框   去掉图片底侧的空白缝隙*/
+img {
+    border: 0;  /*ie6*/
+    vertical-align: middle;
+}
+/*让button 按钮 变成小手*/
+button {
+    cursor: pointer;
+}
+/*取消链接的下划线且修改字体颜色*/
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    font-size: 14px;
+    color: #666
+}
+/*隐藏元素*/
+.hide,
+.none {
+    display: none;
+}
+/*清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+}
+.line-block{
+    display: inline-block;
+}
+
+.operatorHover:hover{
+    color:#9173FB;
+}
+
+
+ .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+ .checkbox_span{
+      display: inline-block;
+    position: relative;
+    border: 1px solid #dcdfe6;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    z-index: 1;
+    transition: border-color .25s cubic-bezier(.71,-.46,.29,1.46),background-color .25s cubic-bezier(.71,-.46,.29,1.46)
+  }
+
+  .checkbox_span.is-indeterminate  {
+    background-color: #8462FF;
+    border-color: #8462FF;
+    cursor:pointer;
+  }
+   .checkbox_span.is-checked{
+      background-color: #8462FF;
+      border-color: #8462FF;
+      cursor:pointer;
+  }
+
+  .checkbox_span.is-indeterminate:before{
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: #fff;
+      height: 2px;
+      transform: scale(.5);
+      left: 0;
+      right: 0;
+      top: 5px;
+  }
+  .checkbox_span.is-checked:after{
+     box-sizing: content-box;
+    content: "";
+    border: 1px solid #fff;
+    border-left: 0;
+    border-top: 0;
+    height: 7px;
+    left: 4px;
+    position: absolute;
+    top: 1px;
+    transform: rotate(45deg) scaleY(0);
+    width: 3px;
+    transition: transform .15s ease-in .05s;
+    transform-origin: center;
+  }
+  .checkbox_span.is-checked:after {
+     transform: rotate(45deg) scaleY(1);
+  }
+  .is_li_checked{
+      color:#8462FF
+  }
+
+  .self_input{
+      width: 140px;
+      border-radius: 3px;
+      height: 30px;
+     background: white;
+     border: 1px solid rgb(220, 223, 230);
+     padding: 0px 9px;
+     display: inline-block;
+     cursor: pointer;
+  }
+
+
+
+.el-pagination .el-pagination__editor .el-input__inner {
+    width: 30px !important;
+    height: 25px !important;
+}
+
+
+

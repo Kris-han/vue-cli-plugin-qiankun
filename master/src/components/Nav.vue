@@ -1,7 +1,7 @@
 <template>
     <div class="nav">
       <div class="left_log">
-        <button class="btn">
+        <button class="btn" @click="btttt">
 
         </button>
       </div>
@@ -64,8 +64,25 @@
 </template>
 
 <script>
+
     export default {
-        name: "NavList"
+        name: "NavList",
+        data(){
+          return {
+
+          }
+        },
+
+        mounted(){
+
+        },
+        methods:{
+          btttt(){
+
+            this.$store.dispatch("SetLeftMenuCloseStateAction",true);
+          }
+        },
+
     }
 </script>
 

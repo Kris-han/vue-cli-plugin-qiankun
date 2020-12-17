@@ -2,19 +2,21 @@
   <div id="container">
     <header>
       <nav id="nav">
-        <NavList>
-          test
-        </NavList>
+        <NavList></NavList>
 
       </nav>
     </header>
-    <div id="appContainer" />
+
+    <letfMenu></letfMenu>
+
+
   </div>
 </template>
 
 <script>
   import { registerMicroApps, runAfterFirstMounted, start } from 'qiankun'
   import NavList from './components/Nav.vue'
+  import letfMenu from './components/left_menu.vue'
 
 	export default {
     name: 'master',
@@ -74,7 +76,8 @@
       }
 		},
     components:{
-      NavList
+      NavList,
+      letfMenu
     }
 	}
 </script>
