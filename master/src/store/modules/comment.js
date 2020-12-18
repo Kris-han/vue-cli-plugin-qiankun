@@ -18,6 +18,7 @@ const comment = {
     },
     actions : {
       SetLeftMenuCloseStateAction({commit},value) {
+        console.log(value)
         commit("SetLeftMenuCloseState",value);
       }
     }

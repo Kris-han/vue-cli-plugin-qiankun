@@ -65,21 +65,34 @@
 
 <script>
 
+   import { mapState } from 'vuex'
+
     export default {
         name: "NavList",
         data(){
           return {
-
+              isopen:false,
           }
         },
 
         mounted(){
 
         },
+        watch:{
+          leftMenuCloseState(){
+            this.isopen = this.leftMenuCloseState;
+          }
+        },
+       computed:{
+            ...mapState({
+               leftMenuCloseState: state => state.comment.leftMenuCloseState
+            })
+         },
         methods:{
           btttt(){
+           this.isopen = !this.isopen;
+           this.$store.dispatch("SetLeftMenuCloseStateAction",this.isopen);
 
-            this.$store.dispatch("SetLeftMenuCloseStateAction",true);
           }
         },
 
