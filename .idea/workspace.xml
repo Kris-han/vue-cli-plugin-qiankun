@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3d9f8952-a77e-4ad4-867f-daf6d3e679ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/master/src/components/left_menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/src/components/left_menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/master/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/master/src/components/left_menu.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+            <state relative-caret-position="391">
+              <caret line="52" column="86" selection-start-line="52" selection-start-column="86" selection-end-line="52" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -161,12 +159,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609243545053</updated>
-      <workItem from="1609243546416" duration="3286000" />
+      <workItem from="1609243546416" duration="3436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3286000" />
+    <option name="totallyTimeSpent" value="3436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -282,8 +280,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/master/src/components/left_menu.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+        <state relative-caret-position="391">
+          <caret line="52" column="86" selection-start-line="52" selection-start-column="86" selection-end-line="52" selection-end-column="86" />
         </state>
       </provider>
     </entry>
