@@ -18,5 +18,9 @@
   ],
   "author": "F-loat <chaimaoyuan@foxmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "element-plus": "^1.0.1-beta.17",
+    "element-ui": "^2.14.1"
+  }
 }

@@ -25,8 +25,12 @@
 
       <transition name="slide-fade" @click.stop>
         <div v-if="show" class="right_container">
-
-          <span class="icon close_icon" @click="close_down"><i class="iconfont">&#xe611;</i></span>
+          <span class="icon close_icon" @click="close_down">
+            <i class="iconfont">&#xe611;</i>
+          </span>
+          <div class="pro_list">
+          <!--头像--->
+          </div>
         </div>
       </transition>
 
@@ -135,6 +139,12 @@
           font-size: 22px;
         }
 
+      }
+      .pro_list{
+        margin-top:30px;
+        border: 1px solid #ddd;
+        height:100%;
+        padding-top: 30px;
       }
     }
 
