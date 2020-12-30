@@ -30,9 +30,12 @@
           </span>
           <div class="pro_list">
           <!--头像--->
-            <div class="block" v-for="fit in fits" :key="fit">
-              <span class="title">{{ fit }}</span>
-              <el-avatar shape="square" :size="100" :fit="fit" :src="url"></el-avatar>
+            <div class="demo-fit list_con">
+              <div class="img_con" v-for="fit in fits" :key="fit">
+                <el-avatar class="img_dis" shape="square" :size="100" :fit="fit" :src="url"></el-avatar>
+
+                <span class="title">{{ fit }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -49,7 +52,7 @@
     data(){
       return {
         show:false,
-        fits: ['fill', 'contain', 'cover', 'none', 'scale-down'],
+        fits: ['fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down'],
         url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
       }
     },
@@ -151,6 +154,22 @@
         border: 1px solid #ddd;
         height:100%;
         padding-top: 30px;
+        .list_con{
+          width: 100%;
+          height: 100%;
+        }
+        .img_con{
+          display: inline-block;
+          width: 19%;
+          text-align: center;
+          padding-top: 20px;
+          border:1px solid #ccc;
+          border-left:none;
+        }
+        .title{
+          display: block;
+        }
+
       }
     }
 
