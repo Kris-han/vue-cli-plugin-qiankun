@@ -1,30 +1,16 @@
 <template>
-    <div class="left_menu" v-show="leftMenuCloseState" @click="close_all_down">
-       <transition name="slide-fade2">
-
-           <div class="menu_container"  v-show="leftMenuCloseState" style="z-index: 100" @click.stop>
-
-                 <div class="item_header item" @click="come_on">
-                <span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>
-                <span class="icon_right"><i class="iconfont">&#xe7a7;</i></span>
-                 </div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe600;</i></span> <span>云服务器ECS</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe600;</i></span> <span>云数据RDS版</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe60d;</i></span> <span>专有网络VPC</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe60e;</i></span> <span>对象存储OSS</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe60f;</i></span> <span>负载均衡</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe613;</i></span> <span>CDN</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe614;</i></span> <span>DataWords</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe616;</i></span> <span>域名</span></div>
-                  <div class="item"><span class="icon"><i class="iconfont">&#xe617;</i></span> <span>云市场</span></div>
-                 </div>
-
-
-
-      </transition>
+    <div class="left_menu" >
+       <!--<transition name="slide-fade2">-->
+           <!--<div class="menu_container"  v-show="leftMenuCloseState" style="z-index: 100" @click.stop>-->
+             <!--&lt;!&ndash;<div class="item_header item" @click="come_on">&ndash;&gt;-->
+              <!--&lt;!&ndash;<span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>&ndash;&gt;-->
+              <!--&lt;!&ndash;<span class="icon_right"><i class="iconfont">&#xe7a7;</i></span>&ndash;&gt;-->
+             <!--&lt;!&ndash;</div>&ndash;&gt;-->
+           <!--</div>-->
+      <!--</transition>-->
 
       <transition name="slide-fade" @click.stop>
-        <div v-if="show" class="right_container">
+        <div v-if="show" v-show="leftMenuCloseState" class="right_container">
           <span class="icon close_icon" @click="close_down">
             <i class="iconfont">&#xe611;</i>
           </span>
@@ -51,7 +37,7 @@
     name: "left_menu",
     data(){
       return {
-        show:false,
+        show: true,
         fits: ['fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down'],
         url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
       }
@@ -60,11 +46,10 @@
       come_on(){
         this.show = !this.show ;
 
-
       },
       close_down(){
-        this.show = false;
-        // this.$store.dispatch("SetLeftMenuCloseStateAction",false);
+        // this.show = false;
+        this.$store.dispatch("SetLeftMenuCloseStateAction",false);
       },
       close_all_down(){
         this.show = false;
@@ -73,7 +58,8 @@
     },
      computed:{
        ...mapState({
-            leftMenuCloseState: state => state.comment.leftMenuCloseState
+            leftMenuCloseState: state => state.comment.leftMenuCloseState,
+
        })
      },
 
@@ -135,7 +121,7 @@
       height:100%;
       position: absolute;
       top:0px;
-      padding-left:240px;
+      /*padding-left:240px;*/
       background-color: rgb(247, 247, 247);
       padding-top: 50px;
       z-index:-1;
