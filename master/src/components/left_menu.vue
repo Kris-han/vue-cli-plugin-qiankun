@@ -162,12 +162,14 @@
           display: inline-block;
           width: 19%;
           text-align: center;
-          padding-top: 20px;
+          padding: 15px 0 5px 0;
           border:1px solid #ccc;
           border-left:none;
         }
         .title{
           display: block;
+          font-weight: bold;
+          font-size:18px;
         }
 
       }
