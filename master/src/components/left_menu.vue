@@ -1,16 +1,29 @@
 <template>
-    <div class="left_menu" >
-       <!--<transition name="slide-fade2">-->
-           <!--<div class="menu_container"  v-show="leftMenuCloseState" style="z-index: 100" @click.stop>-->
-             <!--&lt;!&ndash;<div class="item_header item" @click="come_on">&ndash;&gt;-->
-              <!--&lt;!&ndash;<span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>&ndash;&gt;-->
-              <!--&lt;!&ndash;<span class="icon_right"><i class="iconfont">&#xe7a7;</i></span>&ndash;&gt;-->
-             <!--&lt;!&ndash;</div>&ndash;&gt;-->
-           <!--</div>-->
-      <!--</transition>-->
+    <div class="left_menu"  v-show="leftMenuCloseState" >
+       <transition name="slide-fade2">
+           <div class="menu_container"  style="z-index: 100" @click.stop>
+             <!-- 菜单项 -->
+              <div class="item_header item" @click="come_on">
+                <span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>
+                <span class="icon_right"><i class="iconfont">&#xe7a7;</i></span>
+              </div>
 
+            <div class="item_header item" >
+                <span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>
+              </div>
+
+              <div class="item_header item" >
+                <span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>
+              </div>
+
+              <div class="item_header item" >
+                <span class="icon"><i class="iconfont">&#xe600;</i></span> <span>产品服务</span>
+              </div>
+
+           </div>
+      </transition>
       <transition name="slide-fade" @click.stop>
-        <div v-if="show" v-show="leftMenuCloseState" class="right_container">
+        <div v-if="show" class="right_container">
           <span class="icon close_icon" @click="close_down">
             <i class="iconfont">&#xe611;</i>
           </span>
@@ -19,7 +32,6 @@
             <div class="demo-fit list_con">
               <div class="img_con" v-for="fit in fits" :key="fit">
                 <el-avatar class="img_dis" shape="square" :size="100" :fit="fit" :src="url"></el-avatar>
-
                 <span class="title">{{ fit }}</span>
               </div>
             </div>
@@ -37,7 +49,7 @@
     name: "left_menu",
     data(){
       return {
-        show: true,
+        show: false,
         fits: ['fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down','fill', 'contain', 'cover', 'none', 'scale-down'],
         url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
       }
@@ -45,28 +57,30 @@
     methods:{
       come_on(){
         this.show = !this.show ;
-
       },
       close_down(){
-        // this.show = false;
-        this.$store.dispatch("SetLeftMenuCloseStateAction",false);
+        this.show = false;
+        // this.$store.dispatch("SetLeftMenuCloseStateAction",false);
       },
       close_all_down(){
         this.show = false;
         this.$store.dispatch("SetLeftMenuCloseStateAction",false);
       }
     },
+    watch: {
+      leftMenuCloseState()  {
+        if(this.leftMenuCloseState === false)  this.show = false;
+      }
+    },
      computed:{
        ...mapState({
             leftMenuCloseState: state => state.comment.leftMenuCloseState,
-
        })
      },
 
 
 
     mounted(){
-
     }
   }
 </script>
@@ -112,7 +126,10 @@
       }
       .item_header{
            border-bottom: 1px solid rgb(245, 245, 245);
-           background-color: rgb(245, 245, 245);
+          //  background-color: rgb(245, 245, 245);
+          &:hover {
+             background-color: rgb(245, 245, 245);
+          }
       }
 
     }
@@ -121,7 +138,7 @@
       height:100%;
       position: absolute;
       top:0px;
-      /*padding-left:240px;*/
+      padding-left:240px;
       background-color: rgb(247, 247, 247);
       padding-top: 50px;
       z-index:-1;
