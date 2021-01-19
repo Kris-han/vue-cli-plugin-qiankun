@@ -8,7 +8,8 @@
     </header>
 
     <letfMenu></letfMenu>
-
+    
+    <router-view/>
 
   </div>
 </template>
