@@ -177,6 +177,7 @@
       box-sizing: border-box;
       background-color: rgb(247, 247, 247);
       z-index:-1;
+      overflow: scroll;
       .close_icon{
         // position: absolute;
         right: 30px;
@@ -210,7 +211,7 @@
         // }`
 
         .demo-fit {
-          width: 250px;
+          width: 244px;
           height: 170px;
           background: #fff;
           display: inline-block;
